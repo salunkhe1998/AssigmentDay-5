@@ -26,5 +26,22 @@ namespace GenericConcept
             }
             Console.WriteLine("Minimum value In Given Integer is " + arr[0]);
         }
+        public static void DoubleMin()
+        {
+            double[] arr = DeleteArrayElement.GetDoubleElement();
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                for (int j = 0; j < arr.Length - i - 1; j++)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+                        double temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            Console.WriteLine("Minimum value In Given Float is " + arr[0]);
+        }
     }
 }
